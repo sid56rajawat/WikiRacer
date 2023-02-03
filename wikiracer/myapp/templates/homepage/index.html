@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Wikiracer</title>
+</head>
+<body>
+    <h1>Wikiracer</h1>
+    
+    <form>
+        <label for="start">Start: 
+            <input name="start" id="start" type="text" required>
+        </label>
+        <label for="target">Target: 
+            <input name="target" id="target" type="text" required>
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="ladder">{{ ladder }}</p>
+    <p id="ladderLength">{{ ladderLength }}</p>
+    <p id="linksVisited">{{ linksVisited }}</p>
+</body>
+</html>
