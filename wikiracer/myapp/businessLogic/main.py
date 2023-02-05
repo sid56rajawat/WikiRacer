@@ -1,7 +1,6 @@
 from myapp.businessLogic.getLinks import get_links
 
 def BFS(start,target):
-    # print("start =",start,"\ttarget =",target,"\nlen(start) =",len(start),"\tlen(target) =",len(target))
     cnt = 0
     Q = []
     Q.append(start)
@@ -21,15 +20,9 @@ def BFS(start,target):
                     path.append(av)
                     av = prev[av]
                 path.reverse()
-                # print("No of links visited :",cnt)
                 return [path,cnt]
     return []
 
-if __name__ == '__main__':
-    start = input("Start : ")
-    target = input("Target : ")
-    ladder = BFS(start,target)
-    [print(i ,end=" -> ") for i in ladder]
 
 
 
