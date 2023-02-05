@@ -3,9 +3,6 @@ from django.http import HttpResponse
 from myapp.businessLogic import main
 
 # Create your views here.
-def Index(request):
-    return HttpResponse("Hello, world!")
-
 def displayLadderView(request):
     if request.method == 'GET':
         data = request.GET
