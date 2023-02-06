@@ -45,6 +45,10 @@ $ python manage.py runserver
 ```
 Step6: open the browser and paste "localhost:8000/wikiracer"
 
+Step7: Enter only the name of the start and target page .e.g,<br>
+Start: fruit<br>
+Target: mango
+
 ## Milestones
 ✓ Milestone 1 : Simple Breadth First Search (BFS)
 
