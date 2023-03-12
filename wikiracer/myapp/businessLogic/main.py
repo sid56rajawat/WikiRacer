@@ -1,9 +1,9 @@
-from getLinks import get_links
+from myapp.businessLogic.getLinks import get_links
 import queue
 import time
 
 
-def heuristic(curr):
+def heuristic(curr,target,targetLinks):
     commonLinksCount = 0
 
     for link in get_links(curr):
@@ -17,11 +17,13 @@ def heuristic(curr):
 
 
 def heuristicSearch(start,target):
+    targetLinks = get_links(target)
+    
     # print("start =",start,"\ttarget =",target,"\nlen(start) =",len(start),"\tlen(target) =",len(target))
     pagesVisited = 0
 
     PQ = queue.PriorityQueue()
-    PQ.put((heuristic(start) * -1,start))
+    PQ.put((heuristic(start,target,targetLinks) * -1,start))
     prev = {start:None}
 
     while(PQ.empty()==False):
@@ -32,7 +34,7 @@ def heuristicSearch(start,target):
         adjacentVertices = get_links(currentVertex)
         for av in adjacentVertices:
             if(av not in prev): # if unvisited
-                PQ.put((heuristic(av) * -1,av))
+                PQ.put((heuristic(av,target,targetLinks) * -1,av))
                 prev[av] = currentVertex
             if(av.lower() == target.lower()): # if target
                 path = []
@@ -47,10 +49,10 @@ def heuristicSearch(start,target):
 if __name__ == "__main__":
     start = input("Enter start: ")
     target = input("Enter target: ")
-    targetLinks = get_links(target)
+    #targetLinks = get_links(target)
     start_time = time.time()
-    print(heuristic(start))
-    # print(heuristicSearch(start,target))
+    #print(heuristic(start,target,))
+    print(heuristicSearch(start,target))
     print("Time taken:",time.time()-start_time)
 
 

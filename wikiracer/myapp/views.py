@@ -10,7 +10,7 @@ def displayLadderView(request):
         if(len(data)):
             start = data['start']
             target = data['target']
-            solution = main.BFS(start,target)
+            solution = main.heuristicSearch(start,target)
             ladder = " -> ".join(solution[0])
             linksVisited = "No. of links visited:" + str(solution[1])
             ladderLength = "Length of ladder:" + str(len(solution[0]))
