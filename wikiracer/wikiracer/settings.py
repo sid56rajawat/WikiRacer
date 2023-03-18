@@ -56,7 +56,7 @@ ROOT_URLCONF = 'wikiracer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'D:\Documents\CODE\Bootcamp\wikiracer\myapp\templates'],
+        'DIRS': [r'../myapp/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

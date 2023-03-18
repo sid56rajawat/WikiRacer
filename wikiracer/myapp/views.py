@@ -15,6 +15,6 @@ def displayLadderView(request):
             linksVisited = "No. of links visited:" + str(solution[1])
             ladderLength = "Length of ladder:" + str(len(solution[0]))
 
-        return render(request, "homepage\index.html", {'ladder': ladder, 'linksVisited': linksVisited, 'ladderLength': ladderLength})
+        return render(request, "homepage/index.html", {'ladder': ladder, 'linksVisited': linksVisited, 'ladderLength': ladderLength})
 
 
