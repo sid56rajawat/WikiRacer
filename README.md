@@ -50,8 +50,8 @@ Start: fruit<br>
 Target: mango
 
 ## Milestones
-✓ Milestone 1 : Simple Breadth First Search (BFS)
-✓ Milestone 2 : Dockerization
+✓ Milestone 1 : Simple Breadth First Search (BFS)<br>
+✓ Milestone 2 : Dockerization<br>
 ✓ Milestone 3 : Heuristic Search
 
 ## Acknowledgements
