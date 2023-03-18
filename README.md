@@ -51,6 +51,8 @@ Target: mango
 
 ## Milestones
 ✓ Milestone 1 : Simple Breadth First Search (BFS)
+✓ Milestone 2 : Dockerization
+✓ Milestone 3 : Heuristic Search
 
 ## Acknowledgements
 ### BFS Algorithm
