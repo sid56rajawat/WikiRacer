@@ -56,7 +56,7 @@ ROOT_URLCONF = 'wikiracer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'D:\Documents\CODE\Bootcamp\wikiracer\myapp\templates'],
+        'DIRS': [r'../myapp/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,3 +127,7 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# TEMPLATE_DIRS = (
+#     os.path.join(BASE_DIR, "myapp/templates/"),
+# )
