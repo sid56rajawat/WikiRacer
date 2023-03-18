@@ -12,8 +12,8 @@ def get_links(query): # fetches all the valid links on a given url
         linkString = link['href']
         if(linkString.startswith("/wiki/") and ":" not in linkString and "#" not in linkString):
             links.add(linkString[6:])
-        # if(len(links) > 500): # branching factor
-        #     break
+        if(len(links) > 100): # branching factor
+            break
     return links
 
 if __name__ == '__main__':

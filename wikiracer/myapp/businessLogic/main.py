@@ -1,4 +1,4 @@
-from getLinks import get_links
+from myapp.businessLogic.getLinks import get_links
 import queue
 import time
 
@@ -49,8 +49,8 @@ if __name__ == "__main__":
     target = input("Enter target: ")
     targetLinks = get_links(target)
     start_time = time.time()
-    print(heuristic(start))
-    # print(heuristicSearch(start,target))
+    # print(heuristic(start))
+    print(heuristicSearch(start,target))
     print("Time taken:",time.time()-start_time)
 
 
