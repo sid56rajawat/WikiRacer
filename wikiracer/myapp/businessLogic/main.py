@@ -1,12 +1,11 @@
-from myapp.businessLogic.getLinks import get_links
+from myapp.businessLogic.getLinks import get_link_names
 import queue
 import time
-
 
 def heuristic(curr,target,targetLinks):
     commonLinksCount = 0
 
-    for link in get_links(curr):
+    for link in get_link_names(curr):
         if(link.lower() ==  target.lower()):
             return 9999
         if(link in targetLinks):
@@ -17,7 +16,7 @@ def heuristic(curr,target,targetLinks):
 
 
 def heuristicSearch(start,target):
-    targetLinks = get_links(target)
+    targetLinks = get_link_names(target)
     # print("start =",start,"\ttarget =",target,"\nlen(start) =",len(start),"\tlen(target) =",len(target))
     pagesVisited = 0
 
@@ -30,7 +29,7 @@ def heuristicSearch(start,target):
         pagesVisited += 1
         print(currentVertex,currentHeuristic)
 
-        adjacentVertices = get_links(currentVertex)
+        adjacentVertices = get_link_names(currentVertex)
         for av in adjacentVertices:
             if(av not in prev): # if unvisited
                 PQ.put((heuristic(av,target,targetLinks) * -1,av))
@@ -48,7 +47,7 @@ def heuristicSearch(start,target):
 if __name__ == "__main__":
     start = input("Enter start: ")
     target = input("Enter target: ")
-    targetLinks = get_links(target)
+    targetLinks = get_link_names(target)
     start_time = time.time()
     # print(heuristic(start))
     print(heuristicSearch(start,target))
