@@ -1,1 +1,6 @@
 wikiracer/venv
+__pycache__
+wikiracer/wikiracer/__pycache__
+wikiracer/myapp/__pycache__
+wikiracer/myapp/businessLogic/__pycache__
+wikiracer/myapp/migrations/__pycache__
